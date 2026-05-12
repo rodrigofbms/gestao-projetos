@@ -1,10 +1,8 @@
 import dao.EquipeDAO;
 import dao.ProjetoDAO;
 import dao.UsuarioDAO;
-import database.conexaoBD;
 import model.*;
 
-import java.sql.Connection;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -593,13 +591,12 @@ public class Main {
         System.out.println("Nome do projeto:");
         if (scanner.hasNext("[a-zA-ZÀ-ÿ ]+")) {
             String nome = scanner.nextLine();
+            System.out.println("Descrição:");
 
             if (scanner.hasNext("[a-zA-ZÀ-ÿ ]+")) {
-                System.out.println("Descrição:");
                 String descricao = scanner.nextLine();
-
-
                 System.out.println("Data início (YYYY-MM-DD):");
+
                 DateTimeFormatter Dataformato = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                 LocalDate Datainicio;
                 String DataInicial = scanner.nextLine();

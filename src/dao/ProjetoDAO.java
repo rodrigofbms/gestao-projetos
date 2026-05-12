@@ -103,7 +103,7 @@ public class ProjetoDAO {
 
     public void deletar(int id){
 
-        String sql = "ON DELETE CASCADE FROM projetos WHERE id=?";
+        String sql = "DELETE FROM projetos WHERE id=?";
 
         conexaoBD ConexaoBD = new conexaoBD();
         try(Connection connection = ConexaoBD.conectar();
